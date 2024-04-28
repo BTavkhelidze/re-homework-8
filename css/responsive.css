@@ -1,0 +1,51 @@
+@media screen and (max-width: 1050px) {
+  .section {
+    max-width: 92rem;
+    height: auto;
+    background-color: var(--main-color);
+    border-radius: 2.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    gap: 8.7rem;
+  }
+
+  .section > div:last-child {
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-between;
+    margin-right: 0;
+    padding: 2.4rem;
+  }
+
+  .section > div:last-child > h2 {
+    margin: 6rem 0 3.8rem 0;
+
+    text-align: center;
+  }
+  .imgdesktop {
+    display: none;
+  }
+
+  .imageMob {
+    display: block;
+    position: absolute;
+    top: -11px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* align-self: center; */
+  }
+  .imageMob-shadow {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 52%;
+    transform: translate(-50%, -50%);
+  }
+
+  .inactive-box__sec1:last-child {
+    margin-bottom: 4.8rem;
+  }
+}
