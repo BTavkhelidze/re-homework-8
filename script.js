@@ -1,17 +1,8 @@
-let btn4 = document.querySelector('.btn4');
-let btn3 = document.querySelector('.btn3');
-let btn2 = document.querySelector('.btn2');
-let btn1 = document.querySelector('.btn1');
+const btns = Array.from(document.querySelectorAll('.btn'));
 
-let hideText_4 = document.querySelector('.hid-text4');
-let hideText_3 = document.querySelector('.hid-text3');
-let hideText_2 = document.querySelector('.hid-text2');
-let hideText_1 = document.querySelector('.hid-text1');
+const hideTexts = Array.from(document.querySelectorAll('.hidden'));
 
-let arrow1 = document.querySelector('.arrow1');
-let arrow2 = document.querySelector('.arrow2');
-let arrow3 = document.querySelector('.arrow3');
-let arrow4 = document.querySelector('.arrow4');
+const arrows = Array.from(document.querySelectorAll('.arrow'));
 
 let currentImage = './img/down.svg';
 
@@ -32,23 +23,16 @@ function hideText(el) {
   }
 }
 
-btn4.addEventListener('click', function () {
-  hideText(hideText_4);
+// btns.forEach((btn) =>
+//   btn.addEventListener('click', function () {
+//     hideTexts.forEach((el) => hideText(el));
+//     arrows.forEach((el) => activeArrow(el));
+//   })
+// );
 
-  activeArrow(arrow4);
-});
-
-btn3.addEventListener('click', function () {
-  hideText(hideText_3);
-  activeArrow(arrow3);
-});
-btn2.addEventListener('click', function () {
-  hideText(hideText_2);
-
-  activeArrow(arrow2);
-});
-
-btn1.addEventListener('click', function () {
-  hideText(hideText_1);
-  activeArrow(arrow1);
-});
+for (let i = 0; i < btns.length; i++) {
+  btns[i].addEventListener('click', function () {
+    hideText(hideTexts[i]);
+    activeArrow(arrows[i]);
+  });
+}
